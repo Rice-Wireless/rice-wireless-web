@@ -1,0 +1,19 @@
+schema: hugoblox/author/v1
+slug: knightly
+name:
+  display: Edward Knightly
+  family: Knightly
+last_name: Knightly
+role: Professor, Rice ECE
+affiliations:
+  - name: Rice University, Department of Electrical and Computer Engineering
+    url: https://eceweb.rice.edu/
+links:
+  - icon: hero/globe-alt
+    url: https://profiles.rice.edu/faculty/edward-w-knightly
+interests:
+  - Wireless Networks
+  - mmWave Communications
+  - Network Security
+user_groups:
+  - Principal Investigators

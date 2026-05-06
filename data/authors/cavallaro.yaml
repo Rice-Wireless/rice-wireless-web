@@ -1,0 +1,19 @@
+schema: hugoblox/author/v1
+slug: cavallaro
+name:
+  display: Joseph R. Cavallaro
+  family: Cavallaro
+last_name: Cavallaro
+role: Professor, Rice ECE
+affiliations:
+  - name: Rice University, Department of Electrical and Computer Engineering
+    url: https://eceweb.rice.edu/
+links:
+  - icon: hero/globe-alt
+    url: https://profiles.rice.edu/faculty/joseph-r-cavallaro
+interests:
+  - VLSI Architectures
+  - Wireless Hardware
+  - Reconfigurable Computing
+user_groups:
+  - Principal Investigators

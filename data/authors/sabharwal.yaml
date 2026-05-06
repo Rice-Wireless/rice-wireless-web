@@ -1,0 +1,19 @@
+schema: hugoblox/author/v1
+slug: sabharwal
+name:
+  display: Ashutosh Sabharwal
+  family: Sabharwal
+last_name: Sabharwal
+role: Professor and Chair, Rice ECE
+affiliations:
+  - name: Rice University, Department of Electrical and Computer Engineering
+    url: https://eceweb.rice.edu/
+links:
+  - icon: hero/globe-alt
+    url: https://profiles.rice.edu/faculty/ashutosh-sabharwal
+interests:
+  - Information Theory
+  - Wireless Networks
+  - Full-Duplex Communications
+user_groups:
+  - Principal Investigators

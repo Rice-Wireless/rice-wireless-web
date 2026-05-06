@@ -1,0 +1,19 @@
+schema: hugoblox/author/v1
+slug: segarra
+name:
+  display: Santiago Segarra
+  family: Segarra
+last_name: Segarra
+role: Assistant Professor, Rice ECE
+affiliations:
+  - name: Rice University, Department of Electrical and Computer Engineering
+    url: https://eceweb.rice.edu/
+links:
+  - icon: hero/globe-alt
+    url: https://profiles.rice.edu/faculty/santiago-segarra
+interests:
+  - Graph Signal Processing
+  - Machine Learning for Wireless
+  - Network Science
+user_groups:
+  - Principal Investigators

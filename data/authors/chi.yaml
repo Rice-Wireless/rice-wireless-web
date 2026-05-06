@@ -1,0 +1,19 @@
+schema: hugoblox/author/v1
+slug: chi
+name:
+  display: Taiyun Chi
+  family: Chi
+last_name: Chi
+role: Assistant Professor, Rice ECE
+affiliations:
+  - name: Rice University, Department of Electrical and Computer Engineering
+    url: https://eceweb.rice.edu/
+links:
+  - icon: hero/globe-alt
+    url: https://profiles.rice.edu/faculty/taiyun-chi
+interests:
+  - RF and Millimeter-Wave Circuits
+  - Integrated Circuits
+  - Wireless Hardware
+user_groups:
+  - Principal Investigators

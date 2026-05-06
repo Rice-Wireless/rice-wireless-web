@@ -1,0 +1,19 @@
+schema: hugoblox/author/v1
+slug: chen
+name:
+  display: Ang Chen
+  family: Chen
+last_name: Chen
+role: Assistant Professor, Rice CS
+affiliations:
+  - name: Rice University, Department of Computer Science
+    url: https://csweb.rice.edu/
+links:
+  - icon: hero/globe-alt
+    url: https://profiles.rice.edu/faculty/ang-chen
+interests:
+  - Computer Networks
+  - Programmable Networks
+  - Network Security
+user_groups:
+  - Principal Investigators

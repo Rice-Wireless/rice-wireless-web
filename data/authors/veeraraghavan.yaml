@@ -1,0 +1,19 @@
+schema: hugoblox/author/v1
+slug: veeraraghavan
+name:
+  display: Ashok Veeraraghavan
+  family: Veeraraghavan
+last_name: Veeraraghavan
+role: Professor, Rice ECE
+affiliations:
+  - name: Rice University, Department of Electrical and Computer Engineering
+    url: https://eceweb.rice.edu/
+links:
+  - icon: hero/globe-alt
+    url: https://profiles.rice.edu/faculty/ashok-veeraraghavan
+interests:
+  - Computational Imaging
+  - Computer Vision
+  - Wireless Sensing
+user_groups:
+  - Principal Investigators
