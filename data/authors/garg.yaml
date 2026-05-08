@@ -1,0 +1,33 @@
+schema: hugoblox/author/v1
+slug: garg
+name:
+  display: Nakul Garg
+  family: Garg
+last_name: Garg
+role: Assistant Professor, Rice ECE
+affiliations:
+  - name: Rice University, Department of Electrical and Computer Engineering
+    url: https://eceweb.rice.edu/
+  - name: Ken Kennedy Institute
+    url: https://kenkennedy.rice.edu/
+links:
+  - icon: hero/globe-alt
+    url: https://nakulg.com/
+  - icon: at-symbol
+    url: mailto:nakul@rice.edu
+  - icon: academicons/google-scholar
+    url: https://scholar.google.co.in/citations?user=2YIGP0sAAAAJ
+  - icon: brands/github
+    url: https://github.com/nakul22
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/gargnakul/
+  - icon: brands/x
+    url: https://twitter.com/nakulgarg22
+interests:
+  - Ambient Intelligence
+  - Wireless Sensing
+  - Embedded AI
+  - Healthcare
+  - Robotics
+user_groups:
+  - Principal Investigators
