@@ -130,25 +130,18 @@ sections:
     design:
       view: citation
 
-  - block: collection
+  - block: cta-card
     id: events
     content:
       title: Events
-      subtitle: Talks, Workshops, and Seminars
-      text: ''
-      filters:
-        folders:
-          - events
-        exclude_past: false
-      count: 3
-      sort_by: Date
-      sort_ascending: false
+      text: Rice Wireless hosts talks, workshops, and seminars featuring leading researchers from academia and industry. Browse upcoming and past events on our dedicated events page.
+      button:
+        text: Learn about Rice Wireless events
+        url: /events/
     design:
-      view: card
-      show_date: true
-      show_read_time: false
-      show_read_more: true
-      css_class: "bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900"
+      card:
+        css_class: 'bg-primary-300 dark:bg-primary-700'
+        css_style: ''
       spacing:
         padding: ["4rem", 0, "4rem", 0]
 
