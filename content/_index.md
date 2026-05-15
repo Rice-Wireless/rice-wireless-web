@@ -137,7 +137,7 @@ sections:
       text: Rice Wireless hosts talks, workshops, and seminars featuring leading researchers from academia and industry. Browse upcoming and past events on our dedicated events page.
       button:
         text: Learn about Rice Wireless events
-        url: /events/
+        url: events/
     design:
       card:
         css_class: 'bg-primary-300 dark:bg-primary-700'
