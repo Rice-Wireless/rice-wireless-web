@@ -19,11 +19,11 @@ sections:
           - projects
       count: 0  # Number of items to show (0 = all)
       # Filter by project status or research area
-    #   buttons:
-    #     - name: All Projects
-    #       tag: '*'
-    #     - name: Machine Learning
-    #       tag: 'Machine Learning'
+    buttons:
+      - name: All Projects
+        tag: '*'
+      - name: Research
+        tag: 'Research'
     #     - name: Biology
     #       tag: 'Biology'
     #     - name: Materials

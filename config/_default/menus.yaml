@@ -10,21 +10,18 @@ main:
   - name: Research
     url: '#'
     weight: 20
-  - name: Team
+  - name: News
+    url: '/#news'
+    weight: 50 
+  - name: Events
+    url: '#'
+    weight: 45
+  - name: Faculty
     url: '#'
     weight: 30
   - name: Publications
     url: '#'
     weight: 40
-  - name: Events
-    url: '#'
-    weight: 45
-  - name: News
-    url: '/#news'
-    weight: 50
-  - name: Join Us
-    url: '#'
-    weight: 60
   - name: Contact
     url: '#'
     weight: 70

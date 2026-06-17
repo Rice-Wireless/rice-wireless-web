@@ -21,7 +21,6 @@ sections:
     ce: "section-intro"
     id: "intro"
     As: "section-0267ac1b"
-
   - block: "research-areas"
     content:
       title: "Research Focus Areas"
@@ -29,6 +28,7 @@ sections:
       text: "Our work spans theoretical foundations, system architectures, and deployed experimentation across the wireless stack."
       items:
         - name: "Wireless Networks & Protocols"
+          url: "#"
           description: "New protocols and system architectures for next-generation wireless networks — full-duplex communications, mmWave, machine-to-machine networking, and information freshness."
           icon: "hero/signal"
           image: "icons/network_protocols/mmwave.png"
@@ -38,6 +38,7 @@ sections:
             - "M2M Networks"
             - "Information Freshness"
         - name: "Massive MIMO & Open Wireless Platforms"
+          url: "#TEST"
           description: "Scalable many-antenna architectures, software-defined baseband, and open-access experimental platforms (WARP, RENEW) for community-driven wireless research."
           icon: "hero/cpu-chip"
           image: "icons/massive_mimo_oss/lab_preview.png"
@@ -47,6 +48,7 @@ sections:
             - "Open Wireless Testbeds"
             - "Real-Time Baseband"
         - name: "Information Theory & ML for Wireless"
+          url: "#"
           description: "Network information theory, distributed capacity analysis, and machine-learning-driven detection, scheduling, and resource allocation for wireless systems."
           icon: "hero/light-bulb"
           image: "icons/network_protocols/ml_theory.png"
@@ -153,8 +155,7 @@ sections:
       subtitle: ""
       text: ""
       filters:
-        folders:
-          - "projects"
+        folders: ["projects"]
       count: 0
     design:
       view: "article-grid"
@@ -162,39 +163,4 @@ sections:
     ce: "section-projects"
     id: "projects"
     As: "section-37732691"
-  - block: "contact-info"
-    content:
-      title: "Contact"
-      subtitle: "Get in touch with Rice Wireless"
-      visit_title: "Visit Us"
-      connect_title: "Connect"
-      address:
-        lines:
-          - "Department of Electrical and Computer Engineering, MS-380"
-          - "Rice University"
-          - "6100 Main Street"
-          - "Houston, TX 77005-1892"
-          - "United States"
-      email: "wireless@rice.edu"
-      phone: "+1 (713) 348-6232"
-      social: []
-      prospective:
-        title: "Prospective Members"
-        text: "Interested in joining? We welcome PhD applicants, postdocs, and visiting researchers. See our Join Us page for details."
-        button:
-          text: "Join Us"
-          url: "/opportunities"
-      map_url: "https://maps.google.com/?q=Rice+University+Houston+TX"
-      show_form: false
-    design:
-      css_class: "bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
-      spacing:
-        padding:
-          - "4rem"
-          - 0
-          - "4rem"
-          - 0
-    ce: "section-contact"
-    id: "contact"
-    As: "section-b73e707c"
 ---

@@ -147,3 +147,21 @@
 header {
   background-color: #ffffff !important;
 }
+
+/* Increase font sizes in Events section */
+#events-list .text-3xl {
+  font-size: 3.25rem !important; /* text-4xl */
+}
+
+#events-list article h2 {
+  font-size: 1.3rem !important; /* text-lg */
+}
+
+#events-list article p {
+  font-size: 1.2rem !important; /* text-base */
+}
+
+#events-list article time {
+  font-size: 1.3rem !important; /* keep text-sm */
+  color: #000000 !important; /* text-gray-500 */
+}

@@ -23,8 +23,6 @@ hugoblox:
     # Site meta description for search engines and social sharing
     description: "Wireless at Rice is a multi-faculty research center at Rice University advancing mobile communications through new architectures, protocols, information theory."
     # Social accounts (used for meta tags like Twitter Cards)
-    social:
-      twitter: ""
 
   # ────────────────────────────────────────────────────────────────────────────
   # THEME
