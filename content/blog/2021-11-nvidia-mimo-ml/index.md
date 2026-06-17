@@ -1,7 +1,10 @@
 ---
-title: "Nvidia Funds Rice Researchers for Machine Learning for Massive MIMO"
+title: "NVIDIA Funds Rice Researchers for Machine Learning for Massive MIMO"
 summary: Professors Sabharwal and Segarra are partnering with Nvidia's Dr. Chris Dick to create machine learning tools for massive MIMO applications.
 date: 2021-11-10
+
+image:
+  filename: featured.png
 
 authors:
   - sabharwal

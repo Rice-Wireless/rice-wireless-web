@@ -5,31 +5,28 @@
 
 main:
   - name: Home
-    url: '/#about'
+    url: '#'
     weight: 10
   - name: Research
-    url: '/#projects'
+    url: '#'
     weight: 20
-  - name: Facilities
-    url: '/facilities'
-    weight: 25
   - name: Team
-    url: '/#team'
+    url: '#'
     weight: 30
   - name: Publications
-    url: '/#publications'
+    url: '#'
     weight: 40
   - name: Events
-    url: '/events/'
+    url: '#'
     weight: 45
   - name: News
     url: '/#news'
     weight: 50
   - name: Join Us
-    url: '/opportunities'
+    url: '#'
     weight: 60
   - name: Contact
-    url: '/#contact'
+    url: '#'
     weight: 70
 
 # Link to a PDF of your resume/CV from the menu.

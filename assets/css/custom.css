@@ -1,0 +1,149 @@
+/* Remove rounded borders from research areas cards */
+#research div[class*="rounded-2xl"] {
+  border-radius: 0 !important;
+}
+
+#research div[class*="rounded-lg"] {
+  border-radius: 0 !important;
+}
+
+#research span[class*="rounded"] {
+  border-radius: 0 !important;
+}
+
+#research * {
+  border-radius: 0 !important;
+}
+
+/* Make News section width match Research Focus Areas */
+#news .max-w-screen-lg {
+  max-width: 80rem !important; /* max-w-7xl equivalent */
+}
+
+#news .max-w-prose {
+  max-width: 80rem !important; /* max-w-7xl equivalent */
+}
+
+/* Hide unwanted elements in news cards */
+/* Hide award/tag labels with primary color background */
+#news [class*="bg-primary"] {
+  display: none !important;
+}
+
+/* Hide the flex container that holds tags */
+#news .space-y-4 > .flex.items-center.gap-2 {
+  display: none !important;
+}
+
+/* Hide author avatar */
+#news .relative.h-6.w-6 {
+  display: none !important;
+}
+
+/* Hide author name and separator after avatar */
+#news .truncate.max-w-\[9rem\],
+#news .opacity-40 {
+  display: none !important;
+}
+
+/* Hide read more button */
+#news .inline-flex.items-center.gap-2.text-primary-600 {
+  display: none !important;
+}
+
+/* Hide read duration */
+#news span.hidden.sm\:inline:not([datetime]) {
+  display: none !important;
+}
+
+/* Keep research areas images at full opacity */
+#research img {
+  opacity: 1 !important;
+}
+
+#research img:hover {
+  opacity: 1 !important;
+}
+
+/* Remove rounded corners from image container */
+#news .relative.overflow-hidden.aspect-\[16\/9\] {
+  border-radius: 0 !important;
+}
+
+#news .relative.overflow-hidden.aspect-\[16\/9\] > * {
+  border-radius: 0 !important;
+}
+
+/* Remove rounded corners from rounded icon circles */
+#news .w-16.h-16.rounded-full {
+  border-radius: 0 !important;
+}
+
+/* Reorder news card elements */
+#news .p-8.space-y-4 {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#news .p-8.space-y-4 > h3 {
+  order: 1 !important;
+}
+
+#news .p-8.space-y-4 > .pt-3 {
+  order: 2 !important;
+  border: none !important;
+  padding: 0.25rem 0 1rem 0 !important;
+  margin: 0 !important;
+}
+
+#news .p-8.space-y-4 > p {
+  order: 3 !important;
+}
+
+/* Show time and make sure it's visible */
+#news time {
+  display: inline !important;
+  visibility: visible !important;
+  font-size: 0.875rem !important;
+  color: #6b7280 !important;
+}
+
+
+.hero-gradient-overlay {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0rem;
+  direction: rtl;
+}
+
+.hero-gradient-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0,1) 50%, rgba(0, 0, 0,1) 50%, transparent 72%),
+    url('https://coolshadow.com/wp-content/uploads/2024/02/the-ralph-s-oconnor-building-for-engineering-and-science-skidmore-owings-and-merrill_7.jpg');
+  background-size: 120%, 120%;
+  background-position: center, -50% 70%;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-gradient-overlay > * {
+  position: relative;
+  z-index: 2;
+  direction: ltr;
+  text-align: justify;  /* Changed from 'left' */
+  justify-self: start;
+}
+
+/* Dark header for testing */
+.page-header,
+header {
+  background-color: #ffffff !important;
+}
