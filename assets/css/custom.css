@@ -165,3 +165,98 @@ header {
   font-size: 1.3rem !important; /* keep text-sm */
   color: #000000 !important; /* text-gray-500 */
 }
+
+/* Increase alumni page content width */
+body.page-alumni .max-w-prose {
+  max-width: 100% !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+body.page-alumni .max-w-\[65ch\] {
+  max-width: 100% !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+/* Faculty grid - limit to 2 columns */
+#faculty .grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+@media (max-width: 640px) {
+  #faculty .grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Faculty card horizontal layout - image left, text right */
+#faculty .group > .relative {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: auto !important;
+}
+
+#faculty .group > .relative > block {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  aspect-ratio: auto !important;
+}
+
+#faculty .group > .relative > .p-6 {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+}
+
+#faculty .group {
+  display: flex !important;
+  flex-direction: row !important;
+  overflow: hidden !important;
+}
+
+#faculty .group > .p-8 {
+  flex: 1 1 60% !important;
+  min-width: 0 !important;
+}
+
+#faculty .group .relative {
+  color : #ffffff !important; /* text-gray-900 */
+}
+
+@media (max-width: 768px) {
+  #faculty .group {
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+  }
+
+  #faculty .group > .relative {
+    grid-column: 1 !important;
+    flex: 0 0 auto !important;
+    aspect-ratio: 16/9 !important;
+  }
+
+  #faculty .group > .p-8 {
+    grid-column: 1 !important;
+    flex: 1 1 auto !important;
+  }
+}
+
+#faculty .group > .relative {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: auto !important;
+
+  /* Remove rounded corners */
+  border-radius: 0 !important;
+
+  /* Remove shadows (base + hover) */
+  box-shadow: none !important;
+
+  /* Remove dark mode background */
+  background-color: transparent !important;
+}
+
+/* Kill the hover shadow separately */
+#faculty .group > .relative:hover {
+  box-shadow: none !important;
+}

@@ -1,0 +1,46 @@
+<script>
+// Replace faculty social icons with "View Profile" button
+document.addEventListener('DOMContentLoaded', function() {
+  // Find all faculty profile cards
+  const facultySection = document.getElementById('faculty');
+  if (!facultySection) return;
+
+  // Get all profile card containers
+  const profileCards = facultySection.querySelectorAll('.group.relative');
+
+  profileCards.forEach(card => {
+    // Disable the name link
+    const nameLink = card.querySelector('h3 a');
+    if (nameLink) {
+      nameLink.style.pointerEvents = 'none';
+      nameLink.style.cursor = 'default';
+      nameLink.style.color = 'inherit';
+    }
+
+    // Find the social links container
+    const socialLinksContainer = card.querySelector('.flex.gap-3.pt-2.border-t');
+
+    if (socialLinksContainer) {
+      // Find the profile link (from the name or card)
+      const profileLink = card.querySelector('h3 a');
+
+      if (profileLink) {
+        const profileUrl = profileLink.getAttribute('href');
+
+        // Clear the social links container
+        socialLinksContainer.innerHTML = '';
+
+        // Create and add the View Profile button
+        const button = document.createElement('a');
+        button.href = profileUrl;
+        button.target = '_blank';
+        button.rel = 'noopener';
+        button.className = 'inline-flex items-center gap-1.5 font-bold text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors';
+        button.innerHTML = 'View Profile <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path></svg>';
+
+        socialLinksContainer.appendChild(button);
+      }
+    }
+  });
+});
+</script>

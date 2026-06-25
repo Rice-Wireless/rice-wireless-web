@@ -187,7 +187,7 @@
             <span class="hidden sm:inline whitespace-nowrap">{{ $event_dates }}</span>
             {{ else }}
             <time class="hidden sm:inline whitespace-nowrap" datetime="{{ $item.Date.Format "2006-01-02" }}">
-              {{ $item.Date | time.Format (site.Params.hugoblox.locale.date_format | default "Jan 2, 2006") }}
+              {{ $item.Date | time.Format "Jan 2006" }}
             </time>
             {{ end }}
           {{ end }}
@@ -226,6 +226,23 @@
           <span class="font-medium">{{ i18n "ai_insight" }}:</span>
           <span class="text-zinc-600 dark:text-zinc-400">{{ $item.Params.ai_insights }}</span>
         </div>
+      {{ end }}
+
+      <!-- Faculty action buttons -->
+      {{ if eq $item.Type "authors" }}
+      <div class="pt-4 border-t border-zinc-200/50 dark:border-zinc-700/50 flex gap-3">
+        <a href="{{ $item.RelPermalink }}" class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 hover:bg-zinc-200 dark:hover:bg-zinc-700 font-medium text-sm transition-colors duration-200">
+          <span>View Profile</span>
+        </a>
+        {{ with $item.Params.research_url }}
+        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary-600 dark:bg-primary-600 text-white hover:bg-primary-700 dark:hover:bg-primary-700 font-medium text-sm transition-colors duration-200">
+          <span>Research</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+          </svg>
+        </a>
+        {{ end }}
+      </div>
       {{ end }}
     </div>
 </div>

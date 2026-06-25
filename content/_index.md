@@ -144,6 +144,8 @@ sections:
     design:
       view: "article-grid"
       columns: 2
+      show_read_more: false
+      show_read_time: false
     ce: "section-projects"
     id: "projects"
     As: "section-37732691"

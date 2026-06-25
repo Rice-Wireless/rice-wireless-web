@@ -5,6 +5,8 @@ name:
   family: Knightly
 last_name: Knightly
 role: Professor, Rice ECE
+description: Leading research in wireless networks, mmWave communications and security
+research_url: https://profiles.rice.edu/faculty/edward-w-knightly
 affiliations:
   - name: Rice University, Department of Electrical and Computer Engineering
     url: https://eceweb.rice.edu/
