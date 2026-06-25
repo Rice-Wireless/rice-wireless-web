@@ -179,17 +179,6 @@ body.page-alumni .max-w-\[65ch\] {
   padding-right: 2rem !important;
 }
 
-/* Faculty grid - limit to 2 columns */
-#faculty .grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-}
-
-@media (max-width: 640px) {
-  #faculty .grid {
-    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
-  }
-}
-
 /* Faculty card horizontal layout - image left, text right */
 #faculty .group > .relative {
   display: grid !important;
@@ -253,4 +242,8 @@ body.page-alumni .max-w-\[65ch\] {
 /* Kill the hover shadow separately */
 #faculty .group > .relative:hover {
   box-shadow: none !important;
+}
+
+#faculty .w-full {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }

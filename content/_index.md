@@ -117,10 +117,8 @@ sections:
       sort_ascending: true
     design:
       show_role: true
-      show_organizations: false
-      show_interests: true
-      show_social: true
-      css_class: "bg-gray-50 dark:bg-gray-900 *:!rounded-none"
+      max_columns: 1
+      columns: 1
       spacing:
         padding:
           - "3rem"
