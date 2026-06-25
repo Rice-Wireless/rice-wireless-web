@@ -1,0 +1,74 @@
+{{ $alumni := site.Data.alumni }}
+
+<!-- Collect unique advisors -->
+{{ $advisors := slice }}
+{{ range $alumni }}
+  {{ $advisors = $advisors | append .advisor }}
+{{ end }}
+{{ $advisors = $advisors | uniq | sort }}
+{{/* 
+<!-- Filter buttons -->
+<div id="alumni-filters" style="margin-bottom: 1rem;">
+  <button onclick="filterAlumni('all')" class="active">All</button>
+  {{ range $advisors }}
+  <button onclick="filterAlumni('{{ . }}')">{{ . }}</button>
+  {{ end }}
+</div> */}}
+
+<!-- Alumni list grouped by year -->
+{{ $years := slice }}
+{{ range $alumni }}
+  {{ $years = $years | append .year }}
+{{ end }}
+{{ $years = $years | uniq | sort | collections.Reverse }}
+
+{{ range $years }}
+  {{ $y := . }}
+  <div class="alumni-year-group">
+    <h3>{{ $y }}</h3>
+    <ul>
+      {{ range where $alumni "year" $y }}
+        <li data-advisor="{{ .advisor }}">
+        {{ .name }}, {{ .degree }}'{{ string .year | strings.TrimPrefix "20" }}, Advisor: {{ .advisor }}, ({{ .position }})
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}
+
+<script>
+function filterAlumni(advisor) {
+  // Update button states
+  document.querySelectorAll('#alumni-filters button').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent === advisor || (advisor === 'all' && btn.textContent === 'All'));
+  });
+
+  // Show/hide entries
+  document.querySelectorAll('li[data-advisor]').forEach(li => {
+    li.style.display = (advisor === 'all' || li.dataset.advisor === advisor) ? '' : 'none';
+  });
+
+  // Hide empty year groups
+  document.querySelectorAll('.alumni-year-group').forEach(group => {
+    const visible = [...group.querySelectorAll('li')].some(li => li.style.display !== 'none');
+    group.style.display = visible ? '' : 'none';
+  });
+}
+</script>
+
+<style>
+#alumni-filters button {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background: none;
+  border-radius: 4px;
+}
+#alumni-filters button.active {
+  background: #00205b; /* Rice blue */
+  color: white;
+  border-color: #00205b;
+}
+</style>

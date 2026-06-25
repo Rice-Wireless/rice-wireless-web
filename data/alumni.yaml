@@ -1,0 +1,15 @@
+- name: Jane Smith
+  degree: PhD
+  year: 2023
+  advisor: Rahman Doost-Mohammady
+  position: Research Scientist, Google
+- name: John Doe
+  degree: MS
+  year: 2023
+  advisor: Edward Knightly
+  position: Engineer, Qualcomm
+- name: Alice Lee
+  degree: PhD
+  year: 2021
+  advisor: Ashutosh Sabharwal
+  position: Assistant Professor, UT Austin

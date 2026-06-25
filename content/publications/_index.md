@@ -1,6 +1,0 @@
----
-title: Publications
-
-view: citation
-
----

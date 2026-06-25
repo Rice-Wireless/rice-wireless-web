@@ -28,35 +28,20 @@ sections:
       text: "Our work spans theoretical foundations, system architectures, and deployed experimentation across the wireless stack."
       items:
         - name: "Wireless Networks & Protocols"
-          url: "#"
+          
           description: "New protocols and system architectures for next-generation wireless networks — full-duplex communications, mmWave, machine-to-machine networking, and information freshness."
           icon: "hero/signal"
           image: "icons/network_protocols/mmwave.png"
-          topics:
-            - "Full-Duplex Wireless"
-            - "mmWave Communications"
-            - "M2M Networks"
-            - "Information Freshness"
         - name: "Massive MIMO & Open Wireless Platforms"
-          url: "#TEST"
+          
           description: "Scalable many-antenna architectures, software-defined baseband, and open-access experimental platforms (WARP, RENEW) for community-driven wireless research."
           icon: "hero/cpu-chip"
           image: "icons/massive_mimo_oss/lab_preview.png"
-          topics:
-            - "Massive MIMO"
-            - "Software-Defined Radio"
-            - "Open Wireless Testbeds"
-            - "Real-Time Baseband"
         - name: "Information Theory & ML for Wireless"
-          url: "#"
+          
           description: "Network information theory, distributed capacity analysis, and machine-learning-driven detection, scheduling, and resource allocation for wireless systems."
           icon: "hero/light-bulb"
           image: "icons/network_protocols/ml_theory.png"
-          topics:
-            - "Network Information Theory"
-            - "ML for Wireless"
-            - "Resource Allocation"
-            - "Wireless Detection"
     design:
       layout: "cards"
       spacing:
@@ -73,7 +58,7 @@ sections:
       title: "News & Updates"
       subtitle: ""
       text: ""
-      page_type: "blog"
+      page_type: "news"
       count: 3
       filters:
         author: ""
@@ -117,7 +102,7 @@ sections:
           - "4rem"
           - 0
     ce: "section-events-list"
-    id: "events-list"
+    id: "events"
     As: "section-bfe2cac0"
   - block: "team-showcase"
     content:
@@ -130,10 +115,6 @@ sections:
         - "PhD Students"
       sort_by: "Params.last_name"
       sort_ascending: true
-      cta:
-        text: "View All Members"
-        url: "/authors"
-        icon: "user-group"
     design:
       show_role: true
       show_organizations: false
@@ -147,16 +128,19 @@ sections:
           - "3rem"
           - 0
     ce: "section-team"
-    id: "team"
+    id: "faculty"
     As: "section-ad6ccaf4"
   - block: "collection"
     content:
-      title: "Active Research Projects"
+      title: "Research Projects"
       subtitle: ""
       text: ""
       filters:
-        folders: ["projects"]
+        folders:
+          - "projects"
       count: 0
+      sort_by: "Weight"
+      sort_ascending: true
     design:
       view: "article-grid"
       columns: 2

@@ -104,10 +104,10 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   footer:
     # Footer style variant
-    style: minimal # minimal | columns | centered
+    style: columns # minimal | columns | centered
     language_switcher: false
     # Custom footer text (HTML supported)
-    text: ""
+    text: "Provided with X Y Z "
 
   # ────────────────────────────────────────────────────────────────────────────
   # COPYRIGHT
