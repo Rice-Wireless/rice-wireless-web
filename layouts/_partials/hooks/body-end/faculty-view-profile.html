@@ -1,58 +1,31 @@
 <script>
-// Replace faculty social icons with "View Profile" button
+// Redirect faculty cards to their profile URL from YAML
 document.addEventListener('DOMContentLoaded', function() {
-  // Find all faculty profile cards
   const facultySection = document.getElementById('faculty');
   if (!facultySection) return;
 
-  // Get all profile card containers
   const profileCards = facultySection.querySelectorAll('.group.relative');
 
   profileCards.forEach(card => {
-    // Disable the name link
-    const nameLink = card.querySelector('h3 a');
-    if (nameLink) {
-      nameLink.style.pointerEvents = 'none';
-      nameLink.style.cursor = 'default';
-      nameLink.style.color = 'inherit';
-    }
+    // Get the URL from the first social link (which comes from the author YAML links field)
+    const firstSocialLink = card.querySelector('.flex.gap-3 a');
+    let redirectUrl = firstSocialLink ? firstSocialLink.getAttribute('href') : null;
 
-    // Find the social links container
-    const socialLinksContainer = card.querySelector('.flex.gap-3.pt-2.border-t');
+    if (redirectUrl) {
+      // Update image link
+      const imageLink = card.querySelector('a[href*="/authors/"]');
+      if (imageLink) {
+        imageLink.href = redirectUrl;
+        imageLink.target = '_blank';
+        imageLink.rel = 'noopener';
+      }
 
-    if (socialLinksContainer) {
-      // Find the profile link (from the name or card)
-      const profileLink = card.querySelector('h3 a');
-
-      if (profileLink) {
-        const profileUrl = profileLink.getAttribute('href');
-
-        // Clear the social links container
-        socialLinksContainer.innerHTML = '';
-
-        // Create a single-column grid
-        const grid = document.createElement('div');
-        grid.className = 'grid grid-cols-1 gap-2';
-
-        // Create and add the View Profile button
-        const button = document.createElement('a');
-        button.href = profileUrl;
-        button.target = '_blank';
-        button.rel = 'noopener';
-        button.className = 'inline-flex items-center gap-1.5 font-bold text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors';
-        button.innerHTML = 'View Profile <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path></svg>';
-
-        // Create the Research item
-        const researchItem = document.createElement('div');
-        researchItem.className = 'font-bold text-gray-900 dark:text-white';
-        researchItem.textContent = 'Research';
-
-        // Add both items to the grid
-        grid.appendChild(button);
-        grid.appendChild(researchItem);
-
-        // Add the grid to the container
-        socialLinksContainer.appendChild(grid);
+      // Update name link
+      const nameLink = card.querySelector('h3 a');
+      if (nameLink) {
+        nameLink.href = redirectUrl;
+        nameLink.target = '_blank';
+        nameLink.rel = 'noopener';
       }
     }
   });

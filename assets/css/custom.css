@@ -207,27 +207,37 @@ body.page-alumni .max-w-\[65ch\] {
 }
 
 @media (max-width: 768px) {
-  #faculty .group {
+
+  /* Faculty card horizontal layout - image left, text right */
+  #faculty .group > .relative {
+    display: grid !important;
     grid-template-columns: 1fr !important;
-    flex-direction: column !important;
+    grid-template-rows: 2 !important;
   }
 
-  #faculty .group > .relative {
+  #faculty .group > .relative > block {
     grid-column: 1 !important;
-    flex: 0 0 auto !important;
-    aspect-ratio: 16/9 !important;
+    grid-row: 1 !important;
+    aspect-ratio: auto !important;
+  }
+
+  #faculty .group > .relative > .p-6 {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
   }
 
   #faculty .group > .p-8 {
-    grid-column: 1 !important;
-    flex: 1 1 auto !important;
+    flex: 1 1 60% !important;
+    min-width: 0 !important;
   }
+
+  #faculty .group .relative {
+    color : #ffffff !important; /* text-gray-900 */
+  }
+
 }
 
 #faculty .group > .relative {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  grid-template-rows: auto !important;
 
   /* Remove rounded corners */
   border-radius: 0 !important;
