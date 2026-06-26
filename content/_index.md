@@ -12,10 +12,6 @@ sections:
       css_class: "hero-gradient-overlay dark"
     content:
       eyebrow: "The open-source page builder"
-      announcement:
-        text: "We are looking for PhD Students"
-        link:
-          text: "Apply"
       title: "Wireless at Rice"
       text: "The Wireless at Rice Center’s singular focus is advancing mobile communications—faster and better from both network and device points-of-view."
     ce: "section-intro"

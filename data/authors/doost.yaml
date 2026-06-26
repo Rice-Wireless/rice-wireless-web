@@ -6,14 +6,10 @@ name:
 last_name: Doost-Mohammady
 role: Research Assistant Professor, Rice ECE
 description: Expert in Open RAN, 5G/6G wireless networking and systems
-research_url: https://rdoosty.github.io/
+research_url: https://scholar.google.com/citations?user=kuJfCcsAAAAJ&hl=en
+profile_url: https://rdoosty.github.io/
 affiliations:
   - name: Rice University, Department of Electrical and Computer Engineering
     url: https://eceweb.rice.edu/
-links:
-  - icon: hero/globe-alt
-    url: https://rdoosty.github.io/
-  - icon: at-symbol
-    url: mailto:doost@rice.edu
 user_groups:
   - Principal Investigators

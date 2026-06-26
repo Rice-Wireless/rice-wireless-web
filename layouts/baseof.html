@@ -17,9 +17,21 @@
     <div class="page-body {{if and (ne .Type "landing") (not $cover)}} my-10{{end}}">
       {{ block "main" . }}{{ end }}
     </div>
+    {{ partial "footer.html" . }}
     {{ partial "functions/get_hook" (dict "hook" "body-end" "context" .) }}
     {{ partial "hooks/body-end/hbx-debug-export.html" . }}
     {{ partial "hooks/body-end/hbx-debug-hud.html" . }}
+    <script>
+      // Generate author profiles mapping from author YAML files
+      window.authorData = {
+        {{ range $key, $author := .Site.Data.authors }}
+          '{{ $key }}': {
+            profile_url: '{{ $author.profile_url }}',
+            research_url: '{{ $author.research_url }}'
+          },
+        {{ end }}
+      };
+    </script>
     <script src="{{ "js/faculty-view-profile.js" | relURL }}"></script>
   </body>
 </html>

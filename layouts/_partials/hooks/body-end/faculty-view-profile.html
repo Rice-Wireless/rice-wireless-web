@@ -1,32 +1,29 @@
 <script>
-// Redirect faculty cards to their profile URL from YAML
+// Redirect faculty cards to their profile URL from YAML data attribute
 document.addEventListener('DOMContentLoaded', function() {
   const facultySection = document.getElementById('faculty');
   if (!facultySection) return;
 
-  const profileCards = facultySection.querySelectorAll('.group.relative');
+  const profileCards = facultySection.querySelectorAll('.group[data-profile-url]');
 
   profileCards.forEach(card => {
-    // Get the URL from the first social link (which comes from the author YAML links field)
-    const firstSocialLink = card.querySelector('.flex.gap-3 a');
-    let redirectUrl = firstSocialLink ? firstSocialLink.getAttribute('href') : null;
+    const profileUrl = card.getAttribute('data-profile-url');
+    if (!profileUrl) return;
 
-    if (redirectUrl) {
-      // Update image link
-      const imageLink = card.querySelector('a[href*="/authors/"]');
-      if (imageLink) {
-        imageLink.href = redirectUrl;
-        imageLink.target = '_blank';
-        imageLink.rel = 'noopener';
-      }
+    // Update image link
+    const imageLink = card.querySelector('a[href*="/authors/"]');
+    if (imageLink) {
+      imageLink.href = profileUrl;
+      imageLink.target = '_blank';
+      imageLink.rel = 'noopener noreferrer';
+    }
 
-      // Update name link
-      const nameLink = card.querySelector('h3 a');
-      if (nameLink) {
-        nameLink.href = redirectUrl;
-        nameLink.target = '_blank';
-        nameLink.rel = 'noopener';
-      }
+    // Update name link
+    const nameLink = card.querySelector('h3 a');
+    if (nameLink) {
+      nameLink.href = profileUrl;
+      nameLink.target = '_blank';
+      nameLink.rel = 'noopener noreferrer';
     }
   });
 });

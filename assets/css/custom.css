@@ -142,6 +142,21 @@
   justify-self: start;
 }
 
+@media (max-width: 750px) {
+  .hero-gradient-overlay::before {
+    background-size: auto 100%, auto 100%;
+    background-position: center, left 40%;
+  }
+}
+
+/* Constrain navbar to page content width */
+.page-header .navbar {
+  max-width: 80rem; /* max-w-7xl */
+  margin: 0 auto;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
 /* Dark header for testing */
 .page-header,
 header {

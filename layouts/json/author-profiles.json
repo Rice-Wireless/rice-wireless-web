@@ -1,0 +1,7 @@
+{{ $profiles := dict }}
+{{ range (where .Site.RegularPages "Type" "authors") }}
+  {{ if .Params.profile_url }}
+    {{ $profiles = merge $profiles (dict .File.BaseFileName .Params.profile_url) }}
+  {{ end }}
+{{ end }}
+{{ $profiles | jsonify }}

@@ -6,12 +6,10 @@ name:
 last_name: Chi
 role: Assistant Professor, Rice ECE
 description: Research in RF and millimeter-wave circuits for next-generation wireless
-research_url: https://profiles.rice.edu/faculty/taiyun-chi
+research_url: https://scholar.google.com/citations?user=x7UY3lIAAAAJ&hl=en
+profile_url: https://profiles.rice.edu/faculty/taiyun-chi
 affiliations:
   - name: Rice University, Department of Electrical and Computer Engineering
     url: https://eceweb.rice.edu/
-links:
-  - icon: hero/globe-alt
-    url: https://profiles.rice.edu/faculty/taiyun-chi
 user_groups:
   - Principal Investigators

@@ -1,0 +1,73 @@
+{{ $block := .block }}
+{{ $page := .page }}
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  {{ with $block.content.title }}
+  <h2 class="text-4xl font-bold mb-2">{{ . }}</h2>
+  {{ end }}
+
+  {{ with $block.content.subtitle }}
+  <p class="text-xl text-gray-600 dark:text-gray-400 mb-6">{{ . }}</p>
+  {{ end }}
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {{ $user_groups := $block.content.user_groups }}
+    {{ $sort_by := $block.content.sort_by | default "Params.last_name" }}
+    {{ $sort_ascending := $block.content.sort_ascending | default true }}
+
+    {{ range $page.Site.RegularPages }}
+      {{ if eq .Type "authors" }}
+        {{ if $user_groups }}
+          {{ if in $user_groups (index .Params.user_groups 0) }}
+            {{ $profile_url := .Params.profile_url | default .RelPermalink }}
+            {{ $target := "" }}
+            {{ $rel := "" }}
+            {{ if .Params.profile_url }}
+              {{ $target = "_blank" }}
+              {{ $rel = "noopener noreferrer" }}
+            {{ end }}
+
+            <div class="group relative bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300" {{ if .Params.profile_url }}data-profile-url="{{ .Params.profile_url }}"{{ end }}>
+              <div class="aspect-square overflow-hidden rounded-t-lg">
+                {{ with .Params.image }}
+                  <img src="{{ . }}" alt="{{ .Page.Title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                {{ else }}
+                  <div class="w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900"></div>
+                {{ end }}
+              </div>
+
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  <a href="{{ $profile_url }}" {{ if $target }}target="{{ $target }}" rel="{{ $rel }}"{{ end }} class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    {{ .Title }}
+                  </a>
+                </h3>
+
+                {{ with .Params.role }}
+                <p class="text-sm font-medium text-gray-600 dark:text-gray-400 mb-3">{{ . }}</p>
+                {{ end }}
+
+                {{ with .Params.description }}
+                <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-3">{{ . }}</p>
+                {{ end }}
+
+                <div class="pt-4 border-t border-gray-200 dark:border-gray-700 flex gap-3 mt-4">
+                  {{ if .Params.profile_url }}
+                  <a href="{{ .Params.profile_url }}" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 hover:bg-blue-200 dark:hover:bg-blue-800 font-medium text-sm transition-colors duration-200">
+                    <span>View Profile</span>
+                  </a>
+                  {{ end }}
+                  {{ if .Params.research_url }}
+                  <a href="{{ .Params.research_url }}" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-blue-600 dark:bg-blue-600 text-white hover:bg-blue-700 dark:hover:bg-blue-700 font-medium text-sm transition-colors duration-200">
+                    <span>Research</span>
+                  </a>
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </div>
+</div>

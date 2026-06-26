@@ -1,59 +1,80 @@
-// Customize faculty profile cards
+// Redirect faculty cards to their profile URLs and add View Profile & Research buttons
 document.addEventListener('DOMContentLoaded', function() {
   const facultySection = document.getElementById('faculty');
   if (!facultySection) return;
 
-  // Get all profile cards
-  const profileCards = facultySection.querySelectorAll('.group.relative');
+  // Use the authorData mapping generated from author YAML files
+  const authorData = window.authorData || {};
 
-  profileCards.forEach(card => {
+  // Find all author links in the faculty section and store slug
+  const authorLinks = facultySection.querySelectorAll('a[href*="/authors/"]');
+
+  // Process each author link
+  authorLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    const match = href.match(/\/authors\/([^/]+)\//);
+    if (!match) return;
+
+    const slug = match[1];
+    const data = authorData[slug];
+    if (!data || !data.profile_url) return;
+
+    // Store slug for later reference
+    link.setAttribute('data-author-slug', slug);
+
+    // Update the link to point to profile URL
+    link.href = data.profile_url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  });
+
+  // Add View Profile and Research buttons to cards
+  const cards = facultySection.querySelectorAll('.group.relative');
+
+  cards.forEach(card => {
+    const authorLink = card.querySelector('[data-author-slug]');
+    if (!authorLink) return;
+
+    const slug = authorLink.getAttribute('data-author-slug');
+    const data = authorData[slug];
+    if (!data || !data.profile_url) return;
+
     // Find the content div
-    const contentDiv = card.querySelector('.p-6');
+    let contentDiv = card.querySelector('.p-6');
     if (!contentDiv) return;
 
-    // Add redirect icon div
-    const iconDiv = document.createElement('div');
-    iconDiv.className = 'flex gap-3 pt-2 border-t border-gray-200 dark:border-gray-700';
-    contentDiv.appendChild(iconDiv);
+    // Check if buttons already exist
+    if (contentDiv.querySelector('[data-action-buttons]')) return;
 
-    // Add test text to the card
-    const textElement = document.createElement('p');
-    textElement.textContent = 'View Profile';
-    textElement.className = 'mt-3 text-sm text-gray-600 dark:text-gray-400';
-    contentDiv.appendChild(textElement);
+    // Create button container
+    const buttonContainer = document.createElement('div');
+    buttonContainer.className = 'pt-4 mt-4 border-t border-gray-200 dark:border-gray-700 flex flex-col gap-3';
+    buttonContainer.setAttribute('data-action-buttons', 'true');
 
-    // Find the first social link to get the redirect URL
-    const firstSocialLink = card.querySelector('.flex.gap-3 a');
-    let redirectUrl = null;
+    // Create View Profile button
+    const viewProfileBtn = document.createElement('a');
+    viewProfileBtn.href = data.profile_url;
+    viewProfileBtn.target = '_blank';
+    viewProfileBtn.rel = 'noopener noreferrer';
+    viewProfileBtn.className = 'w-full inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-transparent hover:opacity-70 font-medium text-base transition-opacity duration-200';
+    viewProfileBtn.style.color = '#000000';
+    viewProfileBtn.innerHTML = 'View Profile <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7H7v10h10V11m0-4l6-6m0 0v6m0-6H7"/></svg>';
 
-    if (firstSocialLink) {
-      redirectUrl = firstSocialLink.getAttribute('href');
+    buttonContainer.appendChild(viewProfileBtn);
+
+    // Create Research button if research_url exists
+    if (data.research_url) {
+      const researchBtn = document.createElement('a');
+      researchBtn.href = data.research_url;
+      researchBtn.target = '_blank';
+      researchBtn.rel = 'noopener noreferrer';
+      researchBtn.className = 'w-full inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-transparent hover:opacity-70 font-medium text-base transition-opacity duration-200';
+      researchBtn.style.color = '#000000';
+      researchBtn.innerHTML = 'Research <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7H7v10h10V11m0-4l6-6m0 0v6m0-6H7"/></svg>';
+
+      buttonContainer.appendChild(researchBtn);
     }
-    
-    // If no social link found, fall back to profile link
-    if (!redirectUrl) {
-      const profileLink = card.querySelector('h3 a');
-      if (profileLink) {
-        redirectUrl = profileLink.getAttribute('href');
-      }
-    }
 
-    if (redirectUrl) {
-      // Make the entire card clickable by adding event listeners to key elements
-      const imageLink = card.querySelector('a[href*="/authors/"]');
-      const nameLink = card.querySelector('h3 a');
-
-      if (imageLink) {
-        imageLink.href = redirectUrl;
-        imageLink.target = '_blank';
-        imageLink.rel = 'noopener';
-      }
-
-      if (nameLink) {
-        nameLink.href = redirectUrl;
-        nameLink.target = '_blank';
-        nameLink.rel = 'noopener';
-      }
-    }
+    contentDiv.appendChild(buttonContainer);
   });
 });

@@ -6,12 +6,10 @@ name:
 last_name: Segarra
 role: Assistant Professor, Rice ECE
 description: Advancing graph signal processing and machine learning for wireless systems
-research_url: https://profiles.rice.edu/faculty/santiago-segarra
+research_url: https://scholar.google.com/citations?user=O1aSMXQAAAAJ&hl=en
+profile_url: https://profiles.rice.edu/faculty/santiago-segarra
 affiliations:
   - name: Rice University, Department of Electrical and Computer Engineering
     url: https://eceweb.rice.edu/
-links:
-  - icon: hero/globe-alt
-    url: https://profiles.rice.edu/faculty/santiago-segarra
 user_groups:
   - Principal Investigators

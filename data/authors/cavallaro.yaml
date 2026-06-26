@@ -6,12 +6,10 @@ name:
 last_name: Cavallaro
 role: Professor, Rice ECE
 description: Expert in VLSI architectures and wireless hardware for communications
-research_url: https://profiles.rice.edu/faculty/joseph-r-cavallaro
+research_url: https://scholar.google.com/citations?user=yi-l0zkAAAAJ&hl=en
+profile_url: https://profiles.rice.edu/faculty/joseph-r-cavallaro
 affiliations:
   - name: Rice University, Department of Electrical and Computer Engineering
     url: https://eceweb.rice.edu/
-links:
-  - icon: hero/globe-alt
-    url: https://profiles.rice.edu/faculty/joseph-r-cavallaro
 user_groups:
   - Principal Investigators
