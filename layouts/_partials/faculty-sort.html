@@ -1,0 +1,71 @@
+<script>
+// Faculty sorting by weight parameter
+(function() {
+  const authorWeights = {
+    veeraraghavan: 1, sabharwal: 2, knightly: 3, cavallaro: 4, likamwa: 5,
+    xing: 6, garg: 7, segarra: 8, chi: 9, doost: 10
+  };
+
+  function extractAuthorSlug(element) {
+    // Try to find author slug from href attribute
+    const links = element.querySelectorAll('a[href*="/authors/"]');
+    for (const link of links) {
+      const match = link.href.match(/\/authors\/([^/]+)/);
+      if (match) return match[1];
+    }
+    // Try to find in visible text
+    const titleEl = element.querySelector('h3, .font-bold');
+    if (titleEl) {
+      const text = titleEl.textContent.toLowerCase();
+      for (const [slug, weight] of Object.entries(authorWeights)) {
+        if (slug.includes(text) || text.includes(slug)) return slug;
+      }
+    }
+    return null;
+  }
+
+  function sortFacultyCards() {
+    // Find faculty section - try multiple selectors
+    const facultySection = document.getElementById('faculty') ||
+                          document.querySelector('[id*="faculty"]');
+    if (!facultySection) return false;
+
+    // Find grid container
+    const grid = facultySection.querySelector('.grid, [class*="grid"]');
+    if (!grid) return false;
+
+    // Get all cards
+    const cardSelectors = ['.group', '[class*="card"], [class*="item"]'];
+    let cards = [];
+    for (const selector of cardSelectors) {
+      cards = Array.from(grid.querySelectorAll(selector));
+      if (cards.length > 5) break; // Assume we found the right selector
+    }
+
+    if (cards.length < 5) return false;
+
+    // Sort cards
+    cards.sort((a, b) => {
+      const aSlug = extractAuthorSlug(a);
+      const bSlug = extractAuthorSlug(b);
+      const aWeight = authorWeights[aSlug] || 999;
+      const bWeight = authorWeights[bSlug] || 999;
+      return aWeight - bWeight;
+    });
+
+    // Re-append in sorted order
+    cards.forEach(card => grid.appendChild(card));
+    return true;
+  }
+
+  // Try to sort on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', sortFacultyCards);
+  } else {
+    sortFacultyCards();
+  }
+
+  // Also try after a small delay in case content loads async
+  setTimeout(sortFacultyCards, 500);
+})();
+</script>

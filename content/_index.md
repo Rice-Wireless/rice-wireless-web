@@ -107,9 +107,7 @@ sections:
       text: "Rice Wireless brings together faculty from Electrical & Computer Engineering and Computer Science, working across information theory, signal processing, networking, hardware, and machine learning."
       user_groups:
         - "Principal Investigators"
-        - "Postdoctoral Researchers"
-        - "PhD Students"
-      sort_by: "Params.last_name"
+      sort_by: "Params.weight"
       sort_ascending: true
     design:
       show_role: true
@@ -133,7 +131,7 @@ sections:
         folders:
           - "projects"
       count: 0
-      sort_by: "Weight"
+      sort_by: "weight"
       sort_ascending: true
     design:
       view: "article-grid"

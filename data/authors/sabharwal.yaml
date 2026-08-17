@@ -4,7 +4,7 @@ name:
   display: Ashutosh Sabharwal
   family: Sabharwal
 last_name: Sabharwal
-role: Professor and Chair, Rice ECE
+role: Professor, Rice ECE
 description: Leading research in wireless communications and signal processing
 research_url: https://scholar.google.com/citations?user=MiqMO-kAAAAJ&hl=en
 profile_url: https://profiles.rice.edu/faculty/ashutosh-sabharwal
@@ -13,3 +13,4 @@ affiliations:
     url: https://eceweb.rice.edu/
 user_groups:
   - Principal Investigators
+weight: 2

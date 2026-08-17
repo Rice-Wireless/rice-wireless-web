@@ -1,15 +1,535 @@
-- name: Jane Smith
+- name: Yasaman Ghasempour
   degree: PhD
-  year: 2023
-  advisor: Rahman Doost-Mohammady
-  position: Research Scientist, Google
-- name: John Doe
-  degree: MS
-  year: 2023
+  year: 2020
   advisor: Edward Knightly
-  position: Engineer, Qualcomm
-- name: Alice Lee
+  position: Assistant Professor at Princeton University
+- name: Xing Zhang
   degree: PhD
-  year: 2021
+  year: 2020
   advisor: Ashutosh Sabharwal
-  position: Assistant Professor, UT Austin
+  position: Facebook
+- name: Peshal Nayak
+  degree: PhD
+  year: 2019
+  advisor: Edward Knightly
+  position: Samsung
+- name: Ryan Guerra
+  degree: PhD
+  year: 2019
+  advisor: Edward Knightly
+  position: Skylark Wireless
+- name: Pengfei Xu
+  degree: MS
+  year: 2019
+  advisor: Yingyan Lin
+  position: Rebellion Photonics
+- name: Xu Du
+  degree: PhD
+  year: 2019
+  advisor: Ashutosh Sabharwal
+  position: ""
+- name: Fatima Ahsan
+  degree: MS
+  year: 2018
+  advisor: Ashutosh Sabharwal
+  position: ""
+- name: Niranjan Gowda
+  degree: PhD
+  year: 2018
+  advisor: Ashutosh Sabharwal
+  position: ""
+- name: Kumail Haider
+  degree: PhD
+  year: 2018
+  advisor: Edward Knightly
+  position: Hewlett Packard Labs
+- name: Sharan Naribole
+  degree: PhD
+  year: 2018
+  advisor: Edward Knightly
+  position: Samsung
+- name: Xu Zhang
+  degree: PhD
+  year: 2017
+  advisor: Edward Knightly
+  position: Facebook
+- name: Joe Chen
+  degree: MS
+  year: 2017
+  advisor: Edward Knightly
+  position: ""
+- name: Corina Ionita
+  degree: PhD
+  year: 2017
+  advisor: Behnaam Aazhang
+  position: ""
+- name: Gabriel Pivaro
+  degree: PhD
+  year: 2016
+  advisor: Behnaam Aazhang
+  position: Instituto Nacional de Telecomunicacoes
+- name: David Ramirez
+  degree: PhD
+  year: 2016
+  advisor: Behnaam Aazhang
+  position: Postdoctoral Fellow, NYU/Princeton
+- name: Rakesh Malladi
+  degree: PhD
+  year: 2016
+  advisor: Behnaam Aazhang
+  position: LinkedIn
+- name: Qiang Xue
+  degree: PhD
+  year: 2016
+  advisor: Behnaam Aazhang
+  position: Postdoctoral Researcher, University of Oulu
+- name: Nuwan Ferdinand
+  degree: PhD
+  year: 2016
+  advisor: Behnaam Aazhang
+  position: Postdoctoral Fellow, University of Toronto
+- name: Adriana Flores
+  degree: PhD
+  year: 2016
+  advisor: Edward Knightly
+  position: NVIDIA
+- name: Junyi Zhang
+  degree: MS
+  year: 2016
+  advisor: Edward Knightly
+  position: ""
+- name: Aida Vosoughi
+  degree: PhD
+  year: 2016
+  advisor: Joseph Cavallaro
+  position: ""
+- name: Andrew Kwong
+  degree: MS
+  year: 2016
+  advisor: Ashutosh Sabharwal
+  position: Amazon
+- name: Jingwen Bai
+  degree: PhD
+  year: 2016
+  advisor: Ashutosh Sabharwal
+  position: Intel Labs
+- name: Evan Everett
+  degree: PhD
+  year: 2015
+  advisor: Ashutosh Sabharwal
+  position: Numerica
+- name: Qiong Huang
+  degree: MS
+  year: 2015
+  advisor: Ashutosh Sabharwal
+  position: Intel Labs
+- name: Narendra Anand
+  degree: PhD
+  year: 2015
+  advisor: Edward Knightly
+  position: Accenture
+- name: Oscar Bejarano
+  degree: PhD
+  year: 2015
+  advisor: Edward Knightly
+  position: Rice University
+- name: Samantha Summerson
+  degree: PhD
+  year: 2014
+  advisor: Behnaam Aazhang
+  position: Assistant Professor, University of Texas in Austin
+- name: Richard Latimer
+  degree: MS
+  year: 2014
+  advisor: Ashutosh Sabharwal
+  position: Indeed.com
+- name: Achaleshwar Sahai
+  degree: PhD
+  year: 2014
+  advisor: Ashutosh Sabharwal
+  position: Qualcomm
+- name: Pedro Santacruz
+  degree: PhD
+  year: 2013
+  advisor: Ashutosh Sabharwal
+  position: Faculty member at UT Austin
+- name: Debashis Dash
+  degree: PhD
+  year: 2013
+  advisor: Ashutosh Sabharwal
+  position: ""
+- name: Bruno Nardelli
+  degree: PhD
+  year: 2013
+  advisor: Edward Knightly
+  position: LinkedIn
+- name: Matthew Nokleby
+  degree: PhD
+  year: 2012
+  advisor: Behnaam Aazhang
+  position: Target, Inc.
+- name: Gareth B. Middleton
+  degree: PhD
+  year: 2012
+  advisor: Behnaam Aazhang
+  position: Holland & Hart, LLP
+- name: Anastasios Giannoulis
+  degree: PhD
+  year: 2012
+  advisor: Edward Knightly
+  position: MathWorks
+- name: Eugenio Magistretti
+  degree: PhD
+  year: 2012
+  advisor: Edward Knightly
+  position: Akamai Technologies
+- name: Stanislav Miskovic
+  degree: PhD
+  year: 2012
+  advisor: Edward Knightly
+  position: Splunk
+- name: Johanna Ketonen
+  degree: PhD
+  year: 2012
+  advisor: Joseph Cavallaro
+  position: ""
+- name: David Kao
+  degree: PhD
+  year: 2012
+  advisor: Ashutosh Sabharwal
+  position: Google
+- name: Chris Hunter
+  degree: PhD
+  year: 2012
+  advisor: Ashutosh Sabharwal
+  position: Mango Communications
+- name: Melissa Duarte
+  degree: PhD
+  year: 2012
+  advisor: Ashutosh Sabharwal
+  position: Huawei Paris
+- name: Kanes Sutuntivorakoon
+  degree: MS
+  year: 2012
+  advisor: Ashutosh Sabharwal
+  position: Deloitte, Thailand
+- name: Markus Myllylä
+  degree: PhD
+  year: 2011
+  advisor: Joseph Cavallaro
+  position: Renesas Mobile Europe
+- name: Kiarash Amiri
+  degree: PhD
+  year: 2011
+  advisor: Joseph Cavallaro
+  position: Microsoft
+- name: Sun Yang
+  degree: PhD
+  year: 2011
+  advisor: Joseph Cavallaro
+  position: Broadcom
+- name: Ehsan Aryafar
+  degree: PhD
+  year: 2011
+  advisor: Edward Knightly
+  position: Portland State University
+- name: Cen Liu
+  degree: MS
+  year: 2011
+  advisor: Edward Knightly
+  position: ""
+- name: Patrick Murphy
+  degree: PhD
+  year: 2010
+  advisor: Ashutosh Sabharwal
+  position: Founder of Mango Communications
+- name: Vaneet Aggarwal
+  degree: PhD
+  year: 2010
+  advisor: Ashutosh Sabharwal
+  position: Faculty member at Purdue
+- name: Scott Novich
+  degree: MS
+  year: 2009
+  advisor: ""
+  position: Neosensory
+- name: Sid Gupta
+  degree: MS
+  year: 2009
+  advisor: Ashutosh Sabharwal
+  position: Lab126
+- name: Chris Steger
+  degree: PhD
+  year: 2009
+  advisor: Ashutosh Sabharwal
+  position: Netflix
+- name: Joseph Camp
+  degree: PhD
+  year: 2009
+  advisor: Edward Knightly
+  position: Southern Methodist University
+- name: Joshua Robinson
+  degree: PhD
+  year: 2009
+  advisor: Edward Knightly
+  position: Pure Storage
+- name: Jasmin Shrestha
+  degree: MS
+  year: 2009
+  advisor: Edward Knightly
+  position: ""
+- name: Marjan Karkooti
+  degree: PhD
+  year: 2009
+  advisor: Joseph Cavallaro
+  position: Patterson and Sheridan
+- name: Predrag Radosavljevic
+  degree: PhD
+  year: 2008
+  advisor: Joseph Cavallaro
+  position: Patterson and Sheridan
+- name: Chris Steger
+  degree: PhD
+  year: 2008
+  advisor: Behnaam Aazhang
+  position: Netflix
+- name: Nasir Ahmed
+  degree: PhD
+  year: 2007
+  advisor: ""
+  position: ""
+- name: Ahmad Khoshnevis
+  degree: PhD
+  year: 2007
+  advisor: Ashutosh Sabharwal
+  position: Intel Labs
+- name: Gareth Middleton
+  degree: MS
+  year: 2007
+  advisor: Ashutosh Sabharwal
+  position: Holland & Hart, LLP
+- name: Arnab Chakrabarti
+  degree: PhD
+  year: 2007
+  advisor: Ashutosh Sabharwal
+  position: Nephila Advisors, LLC
+- name: Michael Brogioli
+  degree: PhD
+  year: 2007
+  advisor: Joseph Cavallaro
+  position: Freescale
+- name: Jingpu Shi
+  degree: PhD
+  year: 2007
+  advisor: Edward Knightly
+  position: Doliver Capital Advisors
+- name: Abdul Kabbani
+  degree: MS
+  year: 2007
+  advisor: Edward Knightly
+  position: ""
+- name: Violeta Gambiroza
+  degree: PhD
+  year: 2006
+  advisor: Edward Knightly
+  position: Verizon Wireless
+- name: Feifei Lou
+  degree: MS
+  year: 2005
+  advisor: Ashutosh Sabharwal
+  position: China Mobile, Beijing
+- name: Supranamaya Ranjan
+  degree: PhD
+  year: 2005
+  advisor: Edward Knightly
+  position: Coinbase
+- name: Yuanbin Guo
+  degree: PhD
+  year: 2005
+  advisor: Joseph Cavallaro
+  position: Huawei
+- name: Nasir Ahmed
+  degree: PhD
+  year: 2005
+  advisor: Behnaam Aazhang
+  position: Constellation Energy
+- name: Amir Khojastepour
+  degree: PhD
+  year: 2004
+  advisor: Behnaam Aazhang
+  position: NEC Laboratories
+- name: Tarik Muharemovic
+  degree: PhD
+  year: 2004
+  advisor: Behnaam Aazhang
+  position: J.P. Morgan Investment
+- name: Sridhar Rajagopal
+  degree: PhD
+  year: 2004
+  advisor: Joseph Cavallaro
+  position: Samsung
+- name: Aleksandar Kuzmanovic
+  degree: PhD
+  year: 2004
+  advisor: Edward Knightly
+  position: Northwestern University
+- name: Rahul Chawathe
+  degree: MS
+  year: 2004
+  advisor: Edward Knightly
+  position: ""
+- name: Tarik Moharemovic
+  degree: PhD
+  year: 2004
+  advisor: Ashutosh Sabharwal
+  position: Morgan Stanley
+- name: Mohammad Ali Khojastepour
+  degree: PhD
+  year: 2004
+  advisor: Ashutosh Sabharwal
+  position: NEC Research
+- name: Bahareh Sadeghi
+  degree: PhD
+  year: 2003
+  advisor: Edward Knightly
+  position: Intel Research
+- name: Vikram Kanodia
+  degree: PhD
+  year: 2003
+  advisor: Edward Knightly
+  position: Cohesity
+- name: Yonghe Liu
+  degree: PhD
+  year: 2003
+  advisor: Edward Knightly
+  position: University of Texas, Arlington
+- name: Ping Yuan
+  degree: MS
+  year: 2003
+  advisor: Edward Knightly
+  position: ""
+- name: M. Jaber Borran
+  degree: PhD
+  year: 2003
+  advisor: Behnaam Aazhang
+  position: Google
+- name: Krishna Kiram Mukkavilli
+  degree: PhD
+  year: 2003
+  advisor: Ashutosh Sabharwal
+  position: Qualcomm
+- name: Dinesh Rajan
+  degree: PhD
+  year: 2002
+  advisor: Ashutosh Sabharwal
+  position: Faculty member at Southern Methodist University
+- name: Coskun Cetinkaya
+  degree: PhD
+  year: 2002
+  advisor: Edward Knightly
+  position: SUNY Polytechnic Institute
+- name: Martin Leuschen
+  degree: PhD
+  year: 2001
+  advisor: Joseph Cavallaro
+  position: ICx Technologies
+- name: Srikrishna Bhashyam
+  degree: PhD
+  year: 2001
+  advisor: Behnaam Aazhang
+  position: Professor at IIT-Madras, India
+- name: Suman Das
+  degree: PhD
+  year: 2000
+  advisor: Joseph Cavallaro
+  position: Huawei
+- name: Tao Wu
+  degree: MS
+  year: 1999
+  advisor: Edward Knightly
+  position: ""
+- name: Rahul Jain
+  degree: MS
+  year: 1999
+  advisor: Edward Knightly
+  position: ""
+- name: Yile Guo
+  degree: PhD
+  year: 1999
+  advisor: Behnaam Aazhang
+  position: Renesas Mobile
+- name: Jin Lu
+  degree: PhD
+  year: 1999
+  advisor: Behnaam Aazhang
+  position: Broadcom
+- name: Andrew Sendonaris
+  degree: PhD
+  year: 1999
+  advisor: Behnaam Aazhang
+  position: NextNav
+- name: Jingyu Qiu
+  degree: MS
+  year: 1998
+  advisor: Edward Knightly
+  position: ""
+- name: Chaitali Sengupta
+  degree: PhD
+  year: 1998
+  advisor: Joseph Cavallaro
+  position: SNR Labs
+- name: Raghu Madyastha
+  degree: PhD
+  year: 1997
+  advisor: Behnaam Aazhang
+  position: Akami Technologies
+- name: Kishore Kota
+  degree: PhD
+  year: 1996
+  advisor: Joseph Cavallaro
+  position: Broadcom
+- name: Lim Nguyen
+  degree: PhD
+  year: 1996
+  advisor: Behnaam Aazhang
+  position: Professor at University of Nebraska-Lincoln
+- name: Aris Papasakellariou
+  degree: PhD
+  year: 1995
+  advisor: Behnaam Aazhang
+  position: Samsung Electronics
+- name: D. Hemkumar
+  degree: PhD
+  year: 1994
+  advisor: Joseph Cavallaro
+  position: Cirrus Logic
+- name: Monica L. Visinsky
+  degree: PhD
+  year: 1994
+  advisor: Joseph Cavallaro
+  position: Oceaneering Space Systems
+- name: Narayan P. Mandayam
+  degree: PhD
+  year: 1994
+  advisor: Behnaam Aazhang
+  position: Professor and Chair at Rutgers University
+- name: Maite Brandt-Pearce
+  degree: PhD
+  year: 1993
+  advisor: Behnaam Aazhang
+  position: Professor at University of Virginia
+- name: Peter Paris
+  degree: PhD
+  year: 1990
+  advisor: Behnaam Aazhang
+  position: Associate Professor at George Mason University
+- name: Geoffrey C. Orsak
+  degree: PhD
+  year: 1990
+  advisor: Behnaam Aazhang
+  position: Consultant and Academic, former University of Tulsa President
+- name: Mahesh K. Varanasi
+  degree: PhD
+  year: 1989
+  advisor: Behnaam Aazhang
+  position: Professor at University of Colorado at Boulder

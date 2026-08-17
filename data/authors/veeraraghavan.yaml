@@ -4,7 +4,7 @@ name:
   display: Ashok Veeraraghavan
   family: Veeraraghavan
 last_name: Veeraraghavan
-role: Professor, Rice ECE
+role: Professor and Chair, Rice ECE
 description: Research in computational imaging and wireless sensing applications
 research_url: https://scholar.google.com/citations?user=tI-oUmsAAAAJ&hl=en
 profile_url: https://profiles.rice.edu/faculty/ashok-veeraraghavan
@@ -13,3 +13,4 @@ affiliations:
     url: https://eceweb.rice.edu/
 user_groups:
   - Principal Investigators
+weight: 1

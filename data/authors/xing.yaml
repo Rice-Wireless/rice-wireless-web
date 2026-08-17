@@ -1,0 +1,16 @@
+schema: hugoblox/author/v1
+slug: xing
+name:
+  display: Jiarong Xing
+  family: Xing
+last_name: Xing
+role: Assistant Professor, Rice ECE
+description:
+research_url: https://scholar.google.com/citations?user=PeFSwuoAAAAJ&hl
+profile_url: https://profiles.rice.edu/faculty/jiarong-xing-0
+affiliations:
+  - name: Rice University, Department of Electrical and Computer Engineering
+    url: https://eceweb.rice.edu/
+user_groups:
+  - Principal Investigators
+weight: 6
