@@ -54,7 +54,7 @@ sections:
       title: "News & Updates"
       subtitle: ""
       text: ""
-      page_type: "news"
+      page_type: "blog"
       count: 3
       filters:
         author: ""
