@@ -13,7 +13,7 @@ sections:
     content:
       eyebrow: "The open-source page builder"
       title: "Wireless at Rice"
-      text: "The Wireless at Rice Center’s singular focus is advancing mobile communications—faster and better from both network and device points-of-view."
+      text: "The Rice Center for Wireless Research has a singular focus in advancing mobile communications—faster and better from both network and device points-of-view."
     ce: "section-intro"
     id: "intro"
     As: "section-0267ac1b"
